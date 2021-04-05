@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\GameController::class, 'index'])->name('home');
+Route::get('/territory/{territory}', [App\Http\Controllers\GameController::class, 'territory'])->name('territory');
