@@ -15,11 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(Player::class, function(){
+        $this->app->singleton(Player::class, function(){
             return new Player('Vaderus');
         });
         
-        $this->app->bind(WildBeasts::class, function(){
+        $this->app->singleton(WildBeasts::class, function(){
             return new WildBeasts('Wild Beast');
         });
     }

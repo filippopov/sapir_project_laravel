@@ -6,13 +6,23 @@ interface CreatureInterface
 {
     public function getName(); 
     
-    public function setHealth();
+    public function setNewHealth(int $newHealth);
+
+    public function getHealth();
     
-    public function setStrength();
+    public function getStrength();
     
-    public function setDefence();
+    public function getDefence();
     
-    public function setSpeed();
+    public function getSpeed();
     
-    public function setLuck();
+    public function getLuck();
+    
+    public function setDamage(CreatureInterface $creature);
+    
+    public function isAlive();
+    
+    public function getRapidSkill();
+
+    public function getMagicShieldSkill();
 }
